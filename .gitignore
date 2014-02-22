@@ -1,6 +1,11 @@
+# Arquivo compilados#
 *.class
+target
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Outro editores #
+*~
