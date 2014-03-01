@@ -275,10 +275,10 @@ table {
   }
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important;
+    border-top-color: #000000 !important;
   }
   .label {
-    border: 1px solid #000;
+    border: 1px solid #000000;
   }
   .table {
     border-collapse: collapse !important;
@@ -4801,8 +4801,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-color: #FF4A00;
+  border-color: #FFFF;
 }
 
 .navbar-inverse .navbar-brand {
@@ -4820,7 +4820,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #000000;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,

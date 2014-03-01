@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+
+<title>Cadastrar Evento</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+
+<link href="#{request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="#{request.contextPath}/css/estilo.css" rel="stylesheet" type="text/css"/>
+
+</h:head> 
+<body> 
+	
+		<div id="centro">
+			
+			<div class="centroMeio">
+				
+				<h:form >
+				
+					<fieldset>
+						<h:panelGrid>
+						
+						<div>
+							
+							<legend>Cadastro de Eventos</legend>
+							
+							<h:outputLabel value="Nome do Evento" for="nomeEvento"/>
+							<h:inputText value="" id="nomeEvento" size="30" name="nomeEvento" />
+							
+							<br />
+							<br />
+							
+							<h:outputLabel value="Endereço" for="endereco" />
+							<h:selectOneMenu value="" id="bairro">
+								
+								<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+								<f:selectItems value=""/>
+								
+							</h:selectOneMenu>
+							
+							<h:outputLabel value="Número" for="num" />
+							<h:outputText value="" size="10" />
+							
+							<br />
+							<br />
+							
+							<h:outputLabel value="Bairro" for="bairro" />
+							<h:selectOneMenu value="" id="bairro">
+								
+								<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+								<f:selectItems value=""/>
+								
+							</h:selectOneMenu>
+							
+							<h:outputLabel value="cidade" for="cidade" />
+							<h:selectOneMenu value="" id="cidade">
+								
+								<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+								<f:selectItems value=""/>
+								
+							</h:selectOneMenu>
+							
+							<h:outputLabel value="UF" for="uf" />
+							<h:selectOneMenu value="" id="uf">
+								
+								<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+								<f:selectItems value=""/>
+								
+							</h:selectOneMenu>
+							
+							
+							
+							
+							
+							<h:commandButton value="Cadastrar" />
+							
+						</div>
+						</h:panelGrid>		
+					</fieldset>
+				
+				</h:form>		
+				
+			</div>
+					
+		</div>	
+	
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.js" type="text/javascript"></script>
+
+</body> 
+</html>
