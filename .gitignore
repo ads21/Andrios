@@ -9,3 +9,10 @@ target
 
 # Outro editores #
 *~
+
+# Eclipse Files #
+.classpath
+.project
+.settings*
+/target
+nb-configuration.xml
