@@ -9,6 +9,7 @@
 <link href="#{request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="#{request.contextPath}/css/estilo.css" rel="stylesheet" type="text/css"/>
 
+
 </h:head> 
 <body> 
 
@@ -23,26 +24,44 @@
 				<h:form>	
 					
 				<h:panelGrid >
-			
-					<fieldset>
-				
-						<h1>Area de Login</h1>
+						
+						<h1 class="fieldLabel">Pesquisa de Usuários</h1>
 						
 						<br />
 						
-						<h:outputLabel class="fieldLabel" value="Login" />
-						<h:inputText class="form-control" value="" id="login" size="30" />
+						<h:outputText class="fieldLabel" value="Nome" />
+						
+						<h:inputText value="" size="30" id="pesqNomeUsuario"/>
+							
+						<h:commandButton class="btn btn-primary" value="Pesquisar" />
 						
 						<br />
 						
-						<h:outputLabel class="fieldLabel" value="Senha" for="senha" />
-						<h:inputSecret class="form-control" value="" id="senha" size="30" />
-						
-						<br />
-						
-						<h:commandButton value="Entrar" />
-					
-					</fieldset>
+						<h:dataTable class="table table-bordered table-striped table-hover">
+							
+							<f:facet name="header">Lista de Usuários</f:facet>
+								
+							<h:column>
+								
+								<f:facet name="header">Nome</f:facet>
+								
+							</h:column>
+							
+							
+							<h:column>
+								
+								<f:facet name="header">Email</f:facet>
+								
+							</h:column>
+							
+							<h:column>
+								
+								<f:facet name="header">Ações</f:facet>
+								
+																
+							</h:column>
+															
+						</h:dataTable>
 					
 					</h:panelGrid>
 					

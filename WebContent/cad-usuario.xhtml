@@ -9,6 +9,7 @@
 <link href="#{request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="#{request.contextPath}/css/estilo.css" rel="stylesheet" type="text/css"/>
 
+
 </h:head> 
 <body> 
 
@@ -23,15 +24,21 @@
 				<h:form>	
 					
 				<h:panelGrid >
-			
-					<fieldset>
-				
-						<h1>Area de Login</h1>
+						
+						<h1>Cadastra-se</h1>
+						
+						<h:outputLabel value="Nome Usuário" class="fieldLabel"/>
+						<h:inputText class="form-control" value="" id="nomeUsuario" size="30" />
+						
+						<br />
+												
+						<h:outputLabel value="Sobrenome" class="fieldLabel"/>
+						<h:inputText class="form-control" value="" id="sobrenome" size="30" />
 						
 						<br />
 						
-						<h:outputLabel class="fieldLabel" value="Login" />
-						<h:inputText class="form-control" value="" id="login" size="30" />
+						<h:outputLabel class="fieldLabel" value="Email" for="email" />
+						<h:inputText class="form-control" value="" id="email" size="30" />
 						
 						<br />
 						
@@ -40,9 +47,14 @@
 						
 						<br />
 						
-						<h:commandButton value="Entrar" />
-					
-					</fieldset>
+						<h:outputLabel class="fieldLabel" value="Digite senha novamente" for="senhaRep" />
+						<h:inputSecret class="form-control" value="" id="senhaRep" size="30" />
+						
+						<br />
+						
+						<h:commandButton value="Cadastrar" />
+						
+						<h:commandButton value="Voltar" />
 					
 					</h:panelGrid>
 					
