@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+
+<link href="#{request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="#{request.contextPath}/css/estilo.css" rel="stylesheet" type="text/css"/>
+
+
+</h:head> 
+<body> 
+
+<div class="centro">
+
+	<div class="centroMeio">	
+	
+		<div id="container">
+			
+			<div class="content">
+				
+				<h:form>	
+					
+				<h:panelGrid >
+						
+						<h1>Cadastra-se</h1>
+						
+						<h:outputLabel value="Nome Usuário" class="fieldLabel"/>
+						<h:inputText class="form-control" value="" id="nomeUsuario" size="30" />
+						
+						<br />
+												
+						<h:outputLabel value="Sobrenome" class="fieldLabel"/>
+						<h:inputText class="form-control" value="" id="sobrenome" size="30" />
+						
+						<br />
+						
+						<h:outputLabel class="fieldLabel" value="Email" for="email" />
+						<h:inputText class="form-control" value="" id="email" size="30" />
+						
+						<br />
+						
+						<h:outputLabel class="fieldLabel" value="Senha" for="senha" />
+						<h:inputSecret class="form-control" value="" id="senha" size="30" />
+						
+						<br />
+						
+						<h:outputLabel class="fieldLabel" value="Digite senha novamente" for="senhaRep" />
+						<h:inputSecret class="form-control" value="" id="senhaRep" size="30" />
+						
+						<br />
+						
+						<h:commandButton value="Cadastrar" />
+						
+						<h:commandButton value="Voltar" />
+					
+					</h:panelGrid>
+					
+				</h:form>
+			</div>
+		</div>
+	</div>
+</div>
+</body> 
+</html>
