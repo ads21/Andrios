@@ -1,5 +1,7 @@
 # Arquivo compilados#
 *.class
+src/main/webapp/WEB-INF/classes*
+src/main/webapp/WEB-INF/.gitignore
 target
 
 # Package Files #
