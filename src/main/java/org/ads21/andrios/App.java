@@ -1,4 +1,4 @@
-package andrios;
+package org.ads21.andrios;
 
 /**
  * Hello world!
