@@ -1,4 +1,4 @@
-package org.ads21.andrios.modelo;
+package org.ads21.andrios.pojo;
 
 public class Usuario {
 	private String nomeUsuario;
