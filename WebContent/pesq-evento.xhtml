@@ -1,98 +1,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets" 
       template="layout/template.xhtml">
-
-<h:head>
-
-<title>Cadastrar Evento</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-</h:head> 
-<body> 
-
+      
 <ui:define name="centro">
 
 	<div id="container">
-	
+		
 		<div class="content">
-	
+		
 			<h:form>	
-			
+				
 				<h:panelGrid >
-	
+		
 					<h1 class="fieldLabel">Pesquisa de Eventos</h1>
-					
+						
 					<br />
-					
+						
 					<h:outputText class="fieldLabel" value="Nome Evento" />
-					
+						
 					<h:inputText value="" size="30" id="pesqNomeUsuario"/>
-						
+							
 					<h:commandButton class="btn btn-primary" value="Pesquisar" />
-					
+						
 					<br />
-					
+						
 					<h:dataTable class="table table-bordered table-striped table-hover">
-						
+							
 						<f:facet name="header">Lista de Eventos</f:facet>
-							
+								
 						<h:column>
-							
+								
 							<f:facet name="header">Nome do Evento</f:facet>
-							
+								
 						</h:column>
-						
-						
-						<h:column>
-							
-							<f:facet name="header">Data</f:facet>
-							
-						</h:column>
-						
-						<h:column>
-							
-							<f:facet name="header">Hora</f:facet>
-							
-						</h:column>
-						
-						<h:column>
-							
-							<f:facet name="header">Endereço</f:facet>
-							
-						</h:column>
-						
-						<h:column>
-							
-							<f:facet name="header">Org</f:facet>
-							
-						</h:column>
-						
-						<h:column>
-							
-							<f:facet name="header">Preço</f:facet>
-							
-						</h:column>
-						
-						<h:column>
-							
-							<f:facet name="header">Ações</f:facet>
-							
-															
-						</h:column>
-														
-					</h:dataTable>
-			
-				</h:panelGrid>
 												
+						<h:column>
+								
+							<f:facet name="header">Data</f:facet>
+								
+						</h:column>
+							
+						<h:column>
+								
+							<f:facet name="header">Hora</f:facet>
+								
+						</h:column>
+							
+						<h:column>
+								
+							<f:facet name="header">Endereço</f:facet>
+								
+						</h:column>
+							
+						<h:column>
+								
+							<f:facet name="header">Org</f:facet>
+								
+						</h:column>
+							
+						<h:column>
+								
+							<f:facet name="header">Preço</f:facet>
+								
+						</h:column>
+							
+						<h:column>
+								
+							<f:facet name="header">Ações</f:facet>
+									
+						</h:column>
+															
+					</h:dataTable>
+				
+				</h:panelGrid>
+													
 			</h:form>
-						
+							
 		</div>
 			
 	</div>
 	
-</ui:define>
-	
-</body> 
-</html>
+	</ui:define>
+	 
+</ui:composition>
