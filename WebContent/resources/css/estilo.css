@@ -11,7 +11,7 @@ body {
 }
 #centro {
 	width: 100%;
-	min-height: 714px;
+	min-height: 570px;
 }
 #rodape {
 	width: 100%;
@@ -19,11 +19,67 @@ body {
 	background-color: #FF4A00;
 }
 .centroMeio, .rodapeMeio, .topoCentro {
-	width: 900px;
+	width: 740px;
 	margin: 0 auto;
 }
 .posicInfo {
 	color: #000000;
 	float: left;
 	padding: 10px 0;
+}
+.tam-nome {
+	width:300px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-end {
+	width:300px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-number {
+	width:150px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.tam-bair {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-cid {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-uf {
+	width:160px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-preco {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-org {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-desc {
+	width:500px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.dist-bt {
+	padding-left: 5px;
+}
+.dist-label {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #BFBFBF;
+}
+.dist-form {
+	padding-top: 20px;
 }
