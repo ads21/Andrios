@@ -4,7 +4,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
-<body> 
+<h:body> 
 	<ui:composition template="/layout/template.xhtml">
 	<ui:define name="meio">
 		<div class="centroMeio">
@@ -39,10 +39,9 @@
 						
 						<br />
 					
-					<div class="form-group">	
-						<h:commandButton value="Cadastrar" />
-						<h:commandButton value="Voltar" />
-					</div>
+					
+						<h:commandButton value="Cadastrar" class="btn btn-primary"/>
+						<h:commandButton value="Voltar" class="btn btn-default"/>
 						
 					</h:panelGrid>
 				</h:form>
@@ -51,5 +50,5 @@
 		</div>
 	</ui:define>
 	</ui:composition>
-</body> 
+</h:body> 
 </html>

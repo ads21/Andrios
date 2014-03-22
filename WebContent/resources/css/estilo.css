@@ -11,7 +11,7 @@ body {
 }
 #centro {
 	width: 100%;
-	height: 714px;
+	min-height: 714px;
 }
 #rodape {
 	width: 100%;

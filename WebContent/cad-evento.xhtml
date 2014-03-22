@@ -1,110 +1,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      template="layout/template.xhtml"> 
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
+<h:body>
 
-<title>Cadastrar Evento</title>
-
-<div id="centro">
-
-<ui:insert name="centro">
+	<ui:composition template="/layout/template.xhtml">
+	<ui:define name="meio">
 	
-<div id="container">
-		
-<div class="content">
-		
-	<h:form>	
-		
-	<h:panelGrid >
-		
-		<fieldset>
+		<div class="centroMeio">
+		<title>Cadastrar Evento</title>
+
+		<div id="container">
+			<div class="content">	
+				<h:form>	
+				<h:panelGrid>
+					<h1 class="fieldLabel" >Cadastro de Eventos</h1>
 					
-			<h1 class="fieldLabel" >Cadastro de Eventos</h1>
-			
-			<br />
+					<br />
 										
-			<h:outputLabel class="fieldLabel" value="Nome do Evento" for="nomeEvento"/>
-			<h:inputText class="form-control" value="" id="nomeEvento" size="30" name="nomeEvento" />
+					<h:outputLabel class="fieldLabel" value="Nome do Evento" for="nomeEvento"/>
+					<h:inputText class="form-control" value="" id="nomeEvento" size="30" name="nomeEvento" />
+						
+					<br />
+					
+					<h:outputLabel value="Endereço" for="endereco" />
+					<h:selectOneMenu value="" id="endereco" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+					
+					<br />
 			
-			<br />
+					<h:outputLabel value="Número" for="num" />
+					<h:inputText class="form-control" value="" id="num" size="10" name="num" />
 			
-			<h:outputLabel value="Endereço" for="endereco" />
-			<h:selectOneMenu value="" id="endereco">
-				
-				<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-				
-			</h:selectOneMenu>
+					<br />
 			
-			<br />
+					<h:outputLabel value="Bairro" for="bairro" />
+					<h:selectOneMenu value="" id="bairro" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
 			
-			<h:outputLabel value="Número" for="num" />
-			<h:inputText class="form-control" value="" id="num" size="10" name="num" />
+					<br />
 			
-			<br />
+					<h:outputLabel value="Cidade" for="cidade" />
+					<h:selectOneMenu value="" id="cidade" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
 			
-			<h:outputLabel value="Bairro" for="bairro" />
-			<h:selectOneMenu value="" id="bairro">
-				
-				<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-				
-			</h:selectOneMenu>
+					<br />
 			
-			<br />
+					<h:outputLabel value="UF" for="uf" />
+					<h:selectOneMenu value="" id="uf" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
 			
-			<h:outputLabel value="Cidade" for="cidade" />
-			<h:selectOneMenu value="" id="cidade">
-				
-				<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-				
-			</h:selectOneMenu>
+					<br />
 			
-			<br />
+					<h:outputLabel value="Preço" for="preco"/>
+					<h:inputText class="form-control" value="" id="preco" size="10" name="preco" />
 			
-			<h:outputLabel value="UF" for="uf" />
-			<h:selectOneMenu value="" id="uf">
-				
-				<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-				
-			</h:selectOneMenu>
+					<br />
 			
-			<br />
+					<h:outputLabel value="Organizadores" for="org" />
+					<h:selectOneMenu value="" id="org" class="form-control">	
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
 			
-			<h:outputLabel value="Preço" for="preco"/>
-			<h:inputText class="form-control" value="" id="preco" size="10" name="preco" />
+					<br />
 			
-			<br />
-			
-			<h:outputLabel value="Organizadores" for="org" />
-			<h:selectOneMenu value="" id="org">
-				
-				<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-				
-			</h:selectOneMenu>
-			
-			<br />
-			
-			<h:outputLabel value="Descrição" for="desc" />
-			<h:inputTextarea value="" id="desc" name="desc" class="form-control" />
-			
-			<br /> 
-			
-			<h:commandButton value="Cadastrar" />
-			
-		</fieldset>
-			
-	</h:panelGrid>
-								
-</h:form>
-							
-</div>
-	
-</div>
-
-</ui:insert>
-	
-</div>
-	
-</ui:composition> 
+					<h:outputLabel value="Descrição" for="desc" />
+					<h:inputTextarea value="" id="desc" name="desc" class="form-control" />
+					
+					<br /> 
+					
+					<h:commandButton value="Cadastrar" class="btn btn-primary"/>
+				</h:panelGrid>					
+			</h:form>						
+		</div>
+	</div>
+	</div>
+	</ui:define>
+	</ui:composition>
+		
+</h:body>
+</html> 
