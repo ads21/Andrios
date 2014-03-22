@@ -5,32 +5,30 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
 <h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<h:outputStylesheet name="bootsrtap.css" library="css"></h:outputStylesheet>
+	<h:outputStylesheet name="estilo.css" library="css"></h:outputStylesheet>
+	<h:outputStylesheet name="bootsrtap.js" library="javascript"></h:outputStylesheet>
+	<h:outputStylesheet name="jquery-2.1.0.js" library="javascript"></h:outputStylesheet>
 </h:head> 
-<body> 
-
-	<ui:include src="menu.xhtml">
-
-	</ui:include>
-
-	<div id="centro">
-		
-		<div class="centroMeio">
-		
-		</div>
+<h:body>
 	
+	<div id="topo">
+		<ui:insert name="topo">
+			<ui:include src="/layout/topo.xhtml"></ui:include>
+		</ui:insert>
+	</div>
+	
+	<div id="centro">
+		<ui:insert name="meio">
+			<ui:include src="/layout/meio.xhtml"></ui:include>
+		</ui:insert>
 	</div>
 	
 	<div id="rodape">
-	
-		<div class="rodapeMeio">
-		
-			<h:outputLabel value="Desenvolvido por Ads21" />
-		
-		</div>
-		
+		<ui:insert name="rodape">
+			<ui:include src="/layout/rodape.xhtml"></ui:include>
+		</ui:insert>
 	</div>
-
-
-</body> 
+	
+</h:body>
 </html>

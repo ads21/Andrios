@@ -4,34 +4,21 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
-<h:head>
-
-<link href="#{request.contextPath}/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="#{request.contextPath}/css/estilo.css" rel="stylesheet" type="text/css"/>
-
-
-</h:head> 
 <body> 
-
-<div class="centro">
-
-	<div class="centroMeio">	
-	
+	<ui:composition template="/layout/template.xhtml">
+	<ui:define name="meio">
+		<div class="centroMeio">
 		<div id="container">
-			
 			<div class="content">
-				
 				<h:form>	
-					
-				<h:panelGrid >
-						
-						<h1>Cadastra-se</h1>
+					<h:panelGrid>
+						<h1>Cadastra-se</h1>	
 						
 						<h:outputLabel value="Nome Usuário" class="fieldLabel"/>
 						<h:inputText class="form-control" value="" id="nomeUsuario" size="30" />
 						
-						<br />
-												
+						<br />				
+						
 						<h:outputLabel value="Sobrenome" class="fieldLabel"/>
 						<h:inputText class="form-control" value="" id="sobrenome" size="30" />
 						
@@ -51,17 +38,18 @@
 						<h:inputSecret class="form-control" value="" id="senhaRep" size="30" />
 						
 						<br />
-						
+					
+					<div class="form-group">	
 						<h:commandButton value="Cadastrar" />
-						
 						<h:commandButton value="Voltar" />
-					
+					</div>
+						
 					</h:panelGrid>
-					
 				</h:form>
 			</div>
 		</div>
-	</div>
-</div>
+		</div>
+	</ui:define>
+	</ui:composition>
 </body> 
 </html>

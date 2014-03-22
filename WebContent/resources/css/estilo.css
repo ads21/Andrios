@@ -5,35 +5,25 @@ body {
 	padding: 0;
 	font-size: 15px;
 }
-
-
-
+#topo {
+	width:100%;
+	height:50px;
+}
 #centro {
-	
 	width: 100%;
 	height: 714px;
 }
-
-
 #rodape {
-	
 	width: 100%;
 	height: 40px;
 	background-color: #FF4A00;
 }
-
 .centroMeio, .rodapeMeio, .topoCentro {
-	
 	width: 900px;
 	margin: 0 auto;
-	
 }
-
 .posicInfo {
-	
 	color: #000000;
 	float: left;
 	padding: 10px 0;
-	
 }
-
