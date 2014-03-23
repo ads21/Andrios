@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+	<ui:composition template="/layout/template.xhtml">
+	<ui:define name="meio">
+		<div class="centroMeio">
+		<title>Cadastrar Endereço</title>
+		
+		<div id="container">
+			<div class="content">
+				<h:form>
+					
+					<div class="dist-label">
+						<h1 class="fieldLabel">Cadastro de Endereços</h1>
+					</div>
+					
+					
+					<div class="dist-form">
+					<h:dataTable>
+					
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Cidade" class="fieldLabel" for="nomeCidade" />
+							</f:facet>
+							
+							<f:facet name="header">
+								<div class="tam-nome">
+									<h:inputText value="" class="form-control" id="nomeCidade" />
+								</div>
+							</f:facet>
+						</h:column>
+						
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Bairro" />
+							</f:facet>
+							<f:facet name="header">
+								<div class="tam-nome">
+									<h:inputText value="" class="form-control" id="nomeBairro" />
+								</div>
+							</f:facet>
+						</h:column>
+						
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="UF" />
+							</f:facet>
+							<f:facet name="header">
+								<div class="tam-uf">
+									<h:selectOneMenu value="" id="if" class="form-control">
+										<f:selectItem itemValue="--Selecione--" noSelectionOption="true"/>
+									</h:selectOneMenu>
+								</div>
+							</f:facet>
+						</h:column>
+					</h:dataTable>	
+					</div>
+					
+					<h:commandButton value="Cadastrar" class="btn btn-info"/>
+					<h:commandButton value="Voltar" class="btn btn-default"/>
+				</h:form>
+			</div>
+		</div>
+		
+		</div>
+	
+	</ui:define>	
+	</ui:composition>
+</h:body>
+   
+   
+</html>
