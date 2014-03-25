@@ -6,16 +6,32 @@
 
 <h:head>
 
-<title>Menu</title>
+<title>Home</title>
 
 </h:head> 
 <body> 
 	
-	<ui:composition template="/layout.xhtml">
-		
-		
-		
-	</ui:composition>
-
+	<ui:composition template="/layout/template.xhtml">
+		<ui:define name="meio">
+			<div class="centroMeio">
+				<div class="box-esq">
+					<div class="panel panel-default">
+					  <div class="panel-heading">Ultimos Eventos</div>
+					  <div class="panel-body">
+					    Panel content
+					  </div>
+					</div>
+				</div>
+				<div class="box-dir">
+					<div class="panel panel-default">
+					  <div class="panel-heading">Eventos com maior destaque</div>
+					  <div class="panel-body">
+					    Panel content
+					  </div>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>	
 </body> 
 </html>

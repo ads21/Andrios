@@ -1,18 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets" 
-      template="layout/template.xhtml">
-      
-<ui:define name="centro">
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	<div id="container">
-		
-		<div class="content">
-		
-			<h:form>	
-				
+<h:body>
+	<ui:composition template="/layout/template.xhtml">
+	<ui:define name="meio">
+		<div class="centroMeio">
+		<div id="container">		
+			<div class="content">
+			<h:form>
 				<h:panelGrid >
 		
 					<h1 class="fieldLabel">Pesquisa de Eventos</h1>
@@ -79,10 +77,10 @@
 													
 			</h:form>
 							
+			</div>
 		</div>
-			
-	</div>
-	
+		</div>
 	</ui:define>
-	 
-</ui:composition>
+	</ui:composition>
+</h:body>
+</html>

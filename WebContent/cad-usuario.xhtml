@@ -11,39 +11,41 @@
 		<div id="container">
 			<div class="content">
 				<h:form>	
-					<h:panelGrid>
-						<h1>Cadastra-se</h1>	
-						
-						<h:outputLabel value="Nome Usuário" class="fieldLabel"/>
-						<h:inputText class="form-control" value="" id="nomeUsuario" size="30" />
-						
-						<br />				
-						
-						<h:outputLabel value="Sobrenome" class="fieldLabel"/>
-						<h:inputText class="form-control" value="" id="sobrenome" size="30" />
-						
-						<br />
-						
-						<h:outputLabel class="fieldLabel" value="Email" for="email" />
-						<h:inputText class="form-control" value="" id="email" size="30" />
-						
-						<br />
-						
-						<h:outputLabel class="fieldLabel" value="Senha" for="senha" />
-						<h:inputSecret class="form-control" value="" id="senha" size="30" />
-						
-						<br />
-						
-						<h:outputLabel class="fieldLabel" value="Digite senha novamente" for="senhaRep" />
-						<h:inputSecret class="form-control" value="" id="senhaRep" size="30" />
-						
-						<br />
-					
-					
-						<h:commandButton value="Cadastrar" class="btn btn-primary"/>
-						<h:commandButton value="Voltar" class="btn btn-default"/>
-						
-					</h:panelGrid>
+				<div class="dist-label">
+					<h1 class="fieldLabel">Cadastro de Usuários</h1>
+				</div>
+				
+				<div class="dist-form">
+					<h:dataTable>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Nome Usuário" class="fieldLabel"/>
+							</f:facet>
+							<f:facet name="header">
+								<h:inputText class="form-control tam-nome2" value="" id="nomeUsuario"/>
+							</f:facet>		
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Sobrenome" class="fieldLabel"/>								
+							</f:facet>
+							<f:facet name="header">
+								<h:inputText class="form-control tam-nome2" value="" id="sobrenome"/>
+							</f:facet>	
+						</h:column>
+					</h:dataTable>
+					<h:outputLabel class="fieldLabel tam-comum" value="Email" for="email" />
+					<h:inputText class="form-control" value="" id="email"/>
+					<br />
+					<h:outputLabel class="fieldLabel tam-comum" value="Senha" for="senha" />
+					<h:inputSecret class="form-control" value="" id="senha"/>
+					<br />
+					<h:outputLabel class="fieldLabel tam-comum" value="Digite senha novamente" for="senhaRep" />
+					<h:inputSecret class="form-control" value="" id="senhaRep"/>
+					<br />
+					<h:commandButton value="Cadastrar" class="btn btn-primary"/>
+					<h:commandButton value="Voltar" class="btn btn-default"/>
+				</div>
 				</h:form>
 			</div>
 		</div>

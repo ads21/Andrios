@@ -31,9 +31,19 @@ body {
 	float: left;
 	padding: 10px 0;
 }
+/* Aqui definimos os tamanhos dos campos */
+.tam-comum {
+	width: 300px;
+	padding-right: 20px;
+}
 .tam-nome {
 	width:300px;
 	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-nome2 {
+	width:356px;
+	margin-right: 25px;
 	padding-bottom: 20px;
 }
 .tam-end {
@@ -77,8 +87,10 @@ body {
 	padding-right: 20px;
 	padding-bottom: 20px;
 }
-.dist-bt {
-	padding-left: 5px;
+.tam-data {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 }
 .dist-label {
 	padding-bottom: 10px;
@@ -86,4 +98,14 @@ body {
 }
 .dist-form {
 	padding-top: 20px;
+}
+.box-esq {
+	width: 400px;
+	float: left;
+	padding-top: 20px;
+}
+.box-dir {
+	width: 260px;
+	padding-top: 20px;
+	float: right;
 }

@@ -19,6 +19,7 @@
 					<div class="dist-label">
 						<h1 class="fieldLabel" >Cadastro de Eventos</h1>
 					</div>
+					
 					<!-- Primeira Coluna -->
 					
 					<div class="dist-form">
@@ -32,7 +33,7 @@
 						
 							<f:facet name="header">
 								<div class="tam-nome">
-									<h:inputText class="form-control" value="" id="nomeEvento" size="30" name="nomeEvento" />
+									<h:inputText class="form-control" value="" id="nomeEvento" name="nomeEvento" />
 								</div>
 							</f:facet>
 						</h:column>
@@ -57,7 +58,7 @@
 							
 							<f:facet name="header">
 							<div class="tam-number">
-								<h:inputText class="form-control" value="" id="num" size="10" name="num" />
+								<h:inputText class="form-control" value="" id="num" name="num" />
 							</div>			
 							</f:facet>	
 						</h:column>
@@ -115,14 +116,27 @@
 					</h:dataTable>
 					
 					<h:dataTable>
-						<h:column>
+						
+						<h:column>	
+							<f:facet name="header">
+								<h:outputLabel value="Data" for="data"/>
+							</f:facet>
+							
+							<f:facet name="header">
+							<div class="tam-data">
+								<h:inputText class="form-control" value="" id="data" name="data" />
+							</div>
+							</f:facet>
+						</h:column>
+							
+						<h:column>	
 							<f:facet name="header">
 								<h:outputLabel value="Preço" for="preco"/>
 							</f:facet>
 						
 							<f:facet name="header">
 							<div class="tam-preco">
-								<h:inputText class="form-control" value="" id="preco" size="10" name="preco" />
+								<h:inputText class="form-control" value="" id="preco" name="preco" />
 							</div>
 							</f:facet>
 						</h:column>
