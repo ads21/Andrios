@@ -3,6 +3,7 @@
 	<persistence-unit name="AndriosPU">
 	    <provider>org.hibernate.ejb.HibernatePersistence</provider>
 	    <class>org.ads21.andrios.entidade.Eventos</class>
+	    <class>org.ads21.andrios.entidade.Usuario</class>
 	    <properties>
 	         <property name="hibernate.connection.username" value="andrios"/>
       		 <property name="hibernate.connection.password" value="andrios"/>
