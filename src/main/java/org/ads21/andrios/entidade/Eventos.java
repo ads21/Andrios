@@ -1,4 +1,4 @@
-package org.ads21.andrios.pojo;
+package org.ads21.andrios.entidade;
 
 import java.util.Date;
 
