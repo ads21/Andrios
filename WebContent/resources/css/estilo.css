@@ -11,7 +11,7 @@ body {
 }
 #centro {
 	width: 100%;
-	min-height: 570px;
+	min-height: 600px;
 }
 #rodape {
 	width: 100%;
@@ -82,6 +82,11 @@ body {
 	padding-right: 20px;
 	padding-bottom: 20px;
 }
+.tam-area {
+	width:150px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
 .tam-desc {
 	width:500px;
 	padding-right: 20px;
@@ -91,6 +96,14 @@ body {
 	width:200px;
 	padding-right: 20px;
 	padding-bottom: 20px;
+}
+.tam-pesq {
+	width:400px;
+	margin-right: 20px;
+}
+.bt-dist {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .dist-label {
 	padding-bottom: 10px;
@@ -108,4 +121,8 @@ body {
 	width: 260px;
 	padding-top: 20px;
 	float: right;
+}
+.foto-evento {
+	width: 255px;
+	height: 145px;
 }

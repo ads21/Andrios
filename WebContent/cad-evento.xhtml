@@ -119,7 +119,7 @@
 						
 						<h:column>	
 							<f:facet name="header">
-								<h:outputLabel value="Data" for="data"/>
+								<h:outputLabel value="Data do Evento" for="data" id="datepicker"/>
 							</f:facet>
 							
 							<f:facet name="header">
@@ -152,8 +152,22 @@
 									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
 								</h:selectOneMenu>
 							</div>
-							</f:facet>
+							</f:facet>	
 						</h:column>
+						
+						<h:column>
+							<f:facet name="header">
+								<h:outputLabel value="Área" />
+							</f:facet>							
+						
+							<f:facet name="header">
+							<div class="tam-area ">
+								<h:selectOneMenu value="" class="form-control">
+									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+								</h:selectOneMenu>
+							</div>
+							</f:facet>
+						</h:column>	
 					</h:dataTable>
 					
 					<div class="tam-desc">
@@ -161,17 +175,25 @@
 						<h:inputTextarea value="" id="desc" name="desc" class="form-control" />
 					</div>
 					
+					<h:outputLabel value="Ativo"/>
+   				    <h:selectBooleanCheckbox value="#" />
+										
 					</div>
 					
-					<h:commandButton value="Cadastrar" class="btn btn-info"/>
-					<h:commandButton value="Voltar" class="btn btn-default"/>
-					
+					<div class="bt-dist">
+						<h:commandButton value="Cadastrar" class="btn btn-info"/>
+						<h:commandButton value="Voltar" class="btn btn-default"/>		
+					</div>
 			</h:form>						
 		</div>
 	</div>
 	</div>
 	</ui:define>
 	</ui:composition>
-		
+	<script>
+	$(function() {
+	  $( "#datepicker" ).datepicker();
+	});
+  </script>	
 </h:body>
 </html> 

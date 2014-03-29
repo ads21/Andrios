@@ -4,64 +4,62 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
  
-<body> 
+<h:body> 
+<ui:composition template="/layout/template.xhtml">
+<ui:define name="meio">
 
-<div class="centro">
-
-	<div class="centroMeio">	
-	
-		<div id="container">
-			
-			<div class="content">
-				
-				<h:form>	
-					
-				<h:panelGrid >
-						
-						<h1 class="fieldLabel">Pesquisa de Usuários</h1>
-						
-						<br />
-						
-						<h:outputText class="fieldLabel" value="Nome" />
-						
-						<h:inputText value="" size="30" id="pesqNomeUsuario"/>
-							
-						<h:commandButton class="btn btn-primary" value="Pesquisar" />
-						
-						<br />
-						
-						<h:dataTable class="table table-bordered table-striped table-hover">
-							
-							<f:facet name="header">Lista de Usuários</f:facet>
-								
-							<h:column>
-								
-								<f:facet name="header">Nome</f:facet>
-								
-							</h:column>
-							
-							
-							<h:column>
-								
-								<f:facet name="header">Email</f:facet>
-								
-							</h:column>
-							
-							<h:column>
-								
-								<f:facet name="header">Ações</f:facet>
-								
-																
-							</h:column>
-															
-						</h:dataTable>
-					
-					</h:panelGrid>
-					
-				</h:form>
+<div class="centroMeio">	
+	<div id="container">
+		<div class="content">
+			<h:form>	
+			<div class="dist-label">
+				<h1 class="fieldLabel">Pesquisa de Usuários</h1>
 			</div>
+			
+			<br />
+			
+			<h:dataTable>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText class="fieldLabel" value="Nome" />
+					</f:facet>
+					
+					<f:facet name="header">
+						<h:inputText value="" class="form-control tam-pesq" id="pesqNomeUsuario"/>
+					</f:facet>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:commandButton class="btn btn-primary bt-dist" value="Pesquisar" />
+					</f:facet>
+				</h:column>
+				
+			</h:dataTable>
+				<br />			
+				<h:dataTable class="table table-striped">
+				
+					<f:facet name="header">Lista de Usuários</f:facet>
+						
+					<h:column>		
+						<f:facet name="header">Nome</f:facet>	
+					</h:column>
+					
+					<h:column>
+						<f:facet name="header">Email</f:facet>	
+					</h:column>
+					
+					<h:column>
+						<f:facet name="header">Ações</f:facet>														
+					</h:column>
+													
+				</h:dataTable>
+			</h:form>
 		</div>
 	</div>
 </div>
-</body> 
+
+</ui:define>
+</ui:composition>
+</h:body> 
 </html>

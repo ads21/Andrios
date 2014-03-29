@@ -8,11 +8,12 @@
 	<ui:composition template="/layout/template.xhtml">
 	<ui:define name="meio">
 		<div class="centroMeio">
-		<div id="container">		
+		<div id="container">
+		<title>Comprar Ingressos</title>		
 			<div class="content">
 			
 			<div class="dist-label">
-				<h1 class="fieldLabel">Pesquisa de Eventos</h1>
+				<h1 class="fieldLabel">Comprar Ingressos</h1>
 			</div>
 			
 			<br />
@@ -20,20 +21,28 @@
 			<h:dataTable>
 				<h:column>
 					<f:facet name="header">		
-						<h:outputText class="fieldLabel" value="Nome Evento" />
+						<h:outputText class="fieldLabel" value="Data" />
 					</f:facet>
 				
 					<f:facet name="header">	
-						<h:inputText class="form-control tam-pesq" value="" size="30" id="pesqNomeUsuario"/>
+						<h:inputText class="form-control tam-data" value="" id="pesqNomeUsuario"/>
 					</f:facet>
 				</h:column>
 				
 				<h:column>
 					<f:facet name="header">
-						<h:commandButton class="btn btn-primary bt-dist" value="Pesquisar" />
+						<h:outputText value="Evento" class="fielLabel" />
+					</f:facet>
+					
+					<f:facet name="header">
+						<h:selectOneMenu value="" class="form-control">
+							<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+						</h:selectOneMenu>
 					</f:facet>
 				</h:column>
 			</h:dataTable>
+			
+			<h:commandButton class="btn btn-primary bt-dist" value="Pesquisar" />
 			
 			<h:form>
 					
