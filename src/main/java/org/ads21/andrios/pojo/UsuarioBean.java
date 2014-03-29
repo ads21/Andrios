@@ -1,6 +1,6 @@
 package org.ads21.andrios.pojo;
 
-public class Usuario {
+public class UsuarioBean {
 	private String nomeUsuario;
 	private String sobrenomeUsuario;
 	private String emailUsuario;
