@@ -17,51 +17,130 @@
 					<div class="dist-label">
 						<h1 class="fieldLabel">Cadastro de Endereços</h1>
 					</div>
-					
-					
-					<div class="dist-form">
-					<h:dataTable>
-					
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Cidade" class="fieldLabel" for="nomeCidade" />
-							</f:facet>
-							
-							<f:facet name="header">
-								<div class="tam-nome">
-									<h:inputText value="" class="form-control" id="nomeCidade" />
-								</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Bairro" />
-							</f:facet>
-							<f:facet name="header">
-								<div class="tam-nome">
-									<h:inputText value="" class="form-control" id="nomeBairro" />
-								</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="UF" />
-							</f:facet>
-							<f:facet name="header">
-								<div class="tam-uf">
-									<h:selectOneMenu value="" id="if" class="form-control">
-										<f:selectItem itemValue="--Selecione--" noSelectionOption="true"/>
-									</h:selectOneMenu>
-								</div>
-							</f:facet>
-						</h:column>
-					</h:dataTable>	
+				
+				<br />
+				<br />
+				
+				<div class="dist-form">
+				
+				<ul class="nav nav-tabs" id="navbar">
+					  <li class="active"><a href="#tabEst" data-toggle="tab">Estado</a></li>
+					  <li><a href="#tabCid" data-toggle="tab">Cidade</a></li>
+					  <li><a href="#tabBar" data-toggle="tab">Bairro</a></li>
+					  <li><a href="#tabEnd" data-toggle="tab">Endereco</a></li>
+				</ul>
+				
+				<div class="tab-content">
+					<div id="tabEst" class="tab-pane dist-tab">	
+						<h:dataTable>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Nome Estado" for="nomeEst"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:selectOneMenu value="">
+											<f:selectItem itemValue="--Selecione--" noSelectionOption="true"/>
+										</h:selectOneMenu>
+									</f:facet>
+								</h:column>
+							</h:dataTable>
+							<br />
+							<h:commandButton value="Cadastrar" class="btn btn-info"/>
+						</div>
+						<div id="tabCid" class="tab-pane dist-tab">
+							<h:dataTable>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Estado" for="estSelect"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="estSelect" class="form-control" disabled="true"/>
+									</f:facet>
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Nome Cidade" for="nomeCid"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="nomeCid" class="form-control tam-nome"/>
+									</f:facet>
+								</h:column>
+							</h:dataTable>
+							<br />
+							<h:commandButton value="Cadastrar" class="btn btn-info"/>
+						</div>
+						<div id="tabBar" class="tab-pane dist-tab">
+							<h:dataTable>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Estado" for="estSelect"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="estSelect" class="form-control" disabled="true"/>
+									</f:facet>
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Cidade" for="cidSelect"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="cidSelect" class="form-control" disabled="true"/>
+									</f:facet>
+								</h:column>
+								<h:column>	
+									<f:facet name="header">
+										<h:outputLabel value="Nome Bairro" for="nomeBar"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="nomeBar" class="form-control tam-nome"/>
+									</f:facet>
+								</h:column>
+							</h:dataTable>
+							<br />
+							<h:commandButton value="Cadastrar" class="btn btn-info"/>
+						</div>
+						<div id="tabEnd" class="tab-pane dist-tab">
+							<h:dataTable>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Estado" for="estSelect"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="estSelect" class="form-control" disabled="true"/>
+									</f:facet>
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Cidade" for="cidSelect"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="cidSelect" class="form-control" disabled="true"/>
+									</f:facet>
+								</h:column>
+								<h:column>	
+									<f:facet name="header">
+										<h:outputLabel value="Bairro" for="nomeBar"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="nomeBar" class="form-control" disabled="true"/>
+									</f:facet>
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputLabel value="Nome Endereço" for="nomeEnd"/>
+									</f:facet>
+									<f:facet name="header">
+										<h:inputText value="" name="nomeEnd" class="form-control tam-nome"/>
+									</f:facet>
+								</h:column>
+							</h:dataTable>
+							<br />
+							<h:commandButton value="Cadastrar" class="btn btn-info"/>	
+						</div>
 					</div>
+						
+				</div>
 					
-					<h:commandButton value="Cadastrar" class="btn btn-info"/>
-					<h:commandButton value="Voltar" class="btn btn-default"/>
 				</h:form>
 			</div>
 		</div>
@@ -71,6 +150,10 @@
 	</ui:define>	
 	</ui:composition>
 </h:body>
-   
-   
+<script type="text/javascript">
+	$('#navbar a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+</script>
 </html>

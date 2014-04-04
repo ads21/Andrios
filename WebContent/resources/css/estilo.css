@@ -126,3 +126,14 @@ body {
 	width: 255px;
 	height: 145px;
 }
+.dist-tab {
+	padding-top: 20px;
+}
+.borda-evento {
+	border: 2px solid #FFF;
+	width: 200px;
+	height: 150px;
+}
+.borda-evento:HOVER {
+	border: 2px solid #FF4A00;
+}
