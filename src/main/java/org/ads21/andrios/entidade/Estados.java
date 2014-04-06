@@ -1,12 +1,9 @@
 package org.ads21.andrios.entidade;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="uf")
 public class Estados {
 	
 	@Id

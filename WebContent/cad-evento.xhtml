@@ -106,10 +106,9 @@
 							
 							<f:facet name="header">
 							<div class="tam-uf">
-								<h:selectOneMenu value="#{estadosBean.estados.id}" id="uf" class="form-control">
+								<h:selectOneMenu value="#{cidadeBean.estadoId}" id="uf" class="form-control">
 									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-									<f:selectItems value="#{estadosBean.estados}" var="estados" 
-									itemValue="#{estados.id}" itemLabel="#{estados.sigla}"/>
+									<f:selectItems value="#{cidadeBean.siglaEstados}" />
 								</h:selectOneMenu>
 							</div>
 							</f:facet>
