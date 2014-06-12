@@ -5,192 +5,150 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
 <h:body>
-
-	<ui:composition template="/layout/template.xhtml">
-	<ui:define name="meio">
 	
-		<div class="centroMeio">
+	<ui:composition template="/layout/template.xhtml">
+	
+		<ui:define name="meio">
+		
+		<div class="container theme-showcase" role="main">
+		
+		<h:form>
+		
 		<title>Cadastrar Evento</title>
 
-		<div id="container">
-			<div class="content">	
-				<h:form>	
+			
+			<h1 class="fieldLabel" >Cadastro de Eventos</h1>
 					
-					<div class="dist-label">
-						<h1 class="fieldLabel" >Cadastro de Eventos</h1>
-					</div>
+			<!-- Primeira Coluna -->
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel class="fieldLabel" value="Nome do Evento" for="nomeEvento"/>
+					<h:inputText class="form-control" value="" id="nomeEvento" name="nomeEvento" />
 					
-					<!-- Primeira Coluna -->
+				</div>
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Endereço" for="endereco" />
+					<h:selectOneMenu value="" id="endereco" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
 					
-					<div class="dist-form">
+				</div>
+				
+			</div>
+							
+			<!-- Segunda Coluna -->
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+					<h:outputLabel value="Bairro" for="bairro" />
+						<h:selectOneMenu value="" id="bairro" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				</div>			
+				
+				<div class="col-md-4">
+					<h:outputLabel value="Cidade" for="cidade" />
+					<h:selectOneMenu value="" id="cidade" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				</div>
+				
+				<div class="col-md-4">
 					
-					<h:dataTable>
+					<h:outputLabel value="UF" for="uf" />
+					<h:selectOneMenu value="#{cidadeBean.estadoId}" id="uf" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+						<f:selectItems value="#{cidadeBean.siglaEstados}" />
+					</h:selectOneMenu>
+					
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Data do Evento" for="data" id="datepicker"/>
+					<h:inputText class="form-control" value="" id="data" name="data" />
+					
+				</div>
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Preço" for="preco"/>
+					<h:inputText class="form-control" value="" id="preco" name="preco" />
+					
+				</div>
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Organizadores" for="org" />
+					<h:selectOneMenu value="" id="org" class="form-control">	
+					<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				
+				</div>
+				
+			</div>	
+			
+			<div class="row">
+				
+				<div class="col-md-4">	
+					<h:outputLabel value="Área" />
+						<h:selectOneMenu value="" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				</div>		
+			</div>	
 
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel class="fieldLabel" value="Nome do Evento" for="nomeEvento"/>
-							</f:facet>		
-						
-							<f:facet name="header">
-								<div class="tam-nome">
-									<h:inputText class="form-control" value="" id="nomeEvento" name="nomeEvento" />
-								</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Endereço" for="endereco" />
-							</f:facet>
-							<f:facet name="header">
-							<div class="tam-end">
-								<h:selectOneMenu value="" id="endereco" class="form-control">
-									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-								</h:selectOneMenu>
-							</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>					
-							<f:facet name="header">
-								<h:outputLabel value="Número" for="num" />
-							</f:facet>
-							
-							<f:facet name="header">
-							<div class="tam-number">
-								<h:inputText class="form-control" value="" id="num" name="num" />
-							</div>			
-							</f:facet>	
-						</h:column>
-						
-					</h:dataTable>
+			<div class="row">
+			
+				<div class="col-xs-12 col-sm-6 col-md-8">
+					<h:outputLabel value="Descrição" for="desc" />
+					<h:inputTextarea value="" id="desc" name="desc" class="form-control" />				
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-1">
+					<h:outputLabel value="Ativo"/>				
+				</div>
+				
+				<div class="col-md-1">
+					<h:selectBooleanCheckbox value="#" />
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-1">
+					<h:commandButton value="Cadastrar" class="btn btn-info"/>
+				</div>
+				
+				<div class="col-md-1">
+					<h:commandButton value="Voltar" class="btn btn-default"/>
+				</div>
+				
+			</div>
 					
-					<!-- Segunda Coluna -->
-					
-					<h:dataTable>
-												
-						<h:column>
-						
-							<f:facet name="header">
-							
-								<h:outputLabel value="Bairro" for="bairro" />
-							</f:facet>
-							
-							<f:facet name="header">
-							<div class="tam-bair">
-								<h:selectOneMenu value="" id="bairro" class="form-control">
-									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-								</h:selectOneMenu>
-							</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Cidade" for="cidade" />
-							</f:facet>
-								
-							<f:facet name="header">
-							<div class="tam-cid">
-								<h:selectOneMenu value="" id="cidade" class="form-control">
-									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-								</h:selectOneMenu>
-							</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="UF" for="uf" />
-							</f:facet>
-							
-							<f:facet name="header">
-							<div class="tam-uf">
-								<h:selectOneMenu value="#{cidadeBean.estadoId}" id="uf" class="form-control">
-									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-									<f:selectItems value="#{cidadeBean.siglaEstados}" />
-								</h:selectOneMenu>
-							</div>
-							</f:facet>
-						</h:column>
-						
-					</h:dataTable>
-					
-					<h:dataTable>
-						
-						<h:column>	
-							<f:facet name="header">
-								<h:outputLabel value="Data do Evento" for="data" id="datepicker"/>
-							</f:facet>
-							
-							<f:facet name="header">
-							<div class="tam-data">
-								<h:inputText class="form-control" value="" id="data" name="data" />
-							</div>
-							</f:facet>
-						</h:column>
-							
-						<h:column>	
-							<f:facet name="header">
-								<h:outputLabel value="Preço" for="preco"/>
-							</f:facet>
-						
-							<f:facet name="header">
-							<div class="tam-preco">
-								<h:inputText class="form-control" value="" id="preco" name="preco" />
-							</div>
-							</f:facet>
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Organizadores" for="org" />
-							</f:facet>
-						
-							<f:facet name="header">
-							<div class="tam-org">
-								<h:selectOneMenu value="" id="org" class="form-control">	
-									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-								</h:selectOneMenu>
-							</div>
-							</f:facet>	
-						</h:column>
-						
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Área" />
-							</f:facet>							
-						
-							<f:facet name="header">
-							<div class="tam-area ">
-								<h:selectOneMenu value="" class="form-control">
-									<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
-								</h:selectOneMenu>
-							</div>
-							</f:facet>
-						</h:column>	
-					</h:dataTable>
-					
-					<div class="tam-desc">
-						<h:outputLabel value="Descrição" for="desc" />
-						<h:inputTextarea value="" id="desc" name="desc" class="form-control" />
-					</div>
-					
-					<h:outputLabel value="Ativo"/>
-   				    <h:selectBooleanCheckbox value="#" />
-										
-					</div>
-					
-					<div class="bt-dist">
-						<h:commandButton value="Cadastrar" class="btn btn-info"/>
-						<h:commandButton value="Voltar" class="btn btn-default"/>		
-					</div>
-			</h:form>						
+		</h:form>
+			
 		</div>
-	</div>
-	</div>
-	</ui:define>
+			
+		</ui:define>
+		
 	</ui:composition>
+	
 	<script>
 	$(function() {
 	  $( "#datepicker" ).datepicker();

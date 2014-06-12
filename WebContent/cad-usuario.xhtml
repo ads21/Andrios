@@ -5,52 +5,84 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
 <h:body> 
+
 	<ui:composition template="/layout/template.xhtml">
-	<ui:define name="meio">
-		<div class="centroMeio">
-		<div id="container">
-			<div class="content">
-				<h:form>	
-				<div class="dist-label">
-					<h1 class="fieldLabel">Cadastro de Usuários</h1>
+	
+		<ui:define name="meio">
+		
+		<div class="container theme-showcase" role="main">
+		
+		<h:form>
+					
+			<h1 class="fieldLabel">Cadastro de Usuários</h1>
+						
+			<div class="row">
+			
+				<div class="col-md-4">
+					<h:outputLabel class="fieldLabel" value="Nome do Usuario" for="nameUsuer"/>
+					<h:inputText class="form-control" value="" id="nameUser" name="nameUser" />
 				</div>
 				
-				<div class="dist-form">
-					<h:dataTable>
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Nome Usuário" class="fieldLabel"/>
-							</f:facet>
-							<f:facet name="header">
-								<h:inputText class="form-control tam-nome2" value="" id="nomeUsuario"/>
-							</f:facet>		
-						</h:column>
-						<h:column>
-							<f:facet name="header">
-								<h:outputLabel value="Sobrenome" class="fieldLabel"/>								
-							</f:facet>
-							<f:facet name="header">
-								<h:inputText class="form-control tam-nome2" value="" id="sobrenome"/>
-							</f:facet>	
-						</h:column>
-					</h:dataTable>
-					<h:outputLabel class="fieldLabel tam-comum" value="Email" for="email" />
-					<h:inputText class="form-control" value="" id="email"/>
-					<br />
-					<h:outputLabel class="fieldLabel tam-comum" value="Senha" for="senha" />
-					<h:inputSecret class="form-control" value="" id="senha"/>
-					<br />
-					<h:outputLabel class="fieldLabel tam-comum" value="Digite senha novamente" for="senhaRep" />
-					<h:inputSecret class="form-control" value="" id="senhaRep"/>
-					<br />
-					<h:commandButton value="Cadastrar" class="btn btn-primary"/>
-					<h:commandButton value="Voltar" class="btn btn-default"/>
+				<div class="col-md-4">
+					<h:outputLabel class="fieldLabel" value="Sobrenome" for="sobrenome"/>
+					<h:inputText class="form-control" value="" id="sobrenome" name="sobrenome" />
 				</div>
-				</h:form>
+						
 			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+					<h:outputLabel class="fieldLabel" value="email"/>
+					<h:inputText class="form-control" value="" id="email" name="email"/>
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+					
+					<h:outputText class="fieldLabel" value="Senha" />
+					<h:inputText class="form-control" value="" id="senha" name="senha"/>
+					
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+					
+					<h:outputText class="fieldLabel" value="Digite a senha novamente" />
+					<h:inputText class="form-control" value="" id="repeatSenha" name="repeatSenha"/>
+					
+				</div>
+			
+			</div>
+			<br />
+			<div class="row">
+				
+				<div class="col-md-1">
+					
+					<h:commandButton value="Cadastrar" class="btn btn-info" />
+
+				</div>
+				
+				<div class="col-md-1">
+					
+					<h:commandButton value="Voltar" class="btn btn-default" />
+
+				</div>
+				
+			</div>
+			
+		</h:form>
+		
 		</div>
-		</div>
-	</ui:define>
+		
+		</ui:define>
+		
 	</ui:composition>
 </h:body> 
 </html>

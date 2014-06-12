@@ -18,3 +18,4 @@ target
 .settings*
 /target
 nb-configuration.xml
+/build
