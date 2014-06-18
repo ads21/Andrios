@@ -4,43 +4,43 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
  
-<h:body> 
+<h:body>
+ 
 <ui:composition template="/layout/template.xhtml">
-<ui:define name="meio">
-
-<div class="centroMeio">	
-	<div id="container">
-		<div class="content">
-			<h:form>	
-			<div class="dist-label">
-				<h1 class="fieldLabel">Pesquisa de Usuários</h1>
-			</div>
-			
-			<br />
-			
-			<h:dataTable>
-				<h:column>
-					<f:facet name="header">
-						<h:outputText class="fieldLabel" value="Nome" />
-					</f:facet>
+	
+	<ui:define name="meio">
+		
+		<div class="container theme-showcase" role="main">
+		
+			<h:form>
 					
-					<f:facet name="header">
-						<h:inputText value="" class="form-control tam-pesq" id="pesqNomeUsuario"/>
-					</f:facet>
-				</h:column>
+				<h1 class="fieldLabel">Pesquisa de Usuários</h1>
+						
+				<div class="row">
+			
+					<div class="col-md-4">
 				
-				<h:column>
-					<f:facet name="header">
-						<h:commandButton class="btn btn-primary bt-dist" value="Pesquisar" />
-					</f:facet>
-				</h:column>
+						<h:outputText class="fieldLabel" value="Nome" />
+						<h:inputText value="" class="form-control" id="pesqNomeUsuario"/>
+					
+					</div>
+									
+				</div>
+				<br />
+				<div class="row">
 				
-			</h:dataTable>
-				<br />			
+					<div class="col-md-4">
+								
+						<h:commandButton class="btn btn-primary" value="Pesquisar" />
+						
+					</div>
+					
+				</div>
+								
+				<f:facet name="header">Lista de Usuários</f:facet>
+							
 				<h:dataTable class="table table-striped">
 				
-					<f:facet name="header">Lista de Usuários</f:facet>
-						
 					<h:column>		
 						<f:facet name="header">Nome</f:facet>	
 					</h:column>
@@ -48,18 +48,20 @@
 					<h:column>
 						<f:facet name="header">Email</f:facet>	
 					</h:column>
-					
+						
 					<h:column>
 						<f:facet name="header">Ações</f:facet>														
 					</h:column>
 													
 				</h:dataTable>
+			
 			</h:form>
+		
 		</div>
-	</div>
-</div>
-
-</ui:define>
+		
+	</ui:define>
+	
 </ui:composition>
+
 </h:body> 
 </html>
