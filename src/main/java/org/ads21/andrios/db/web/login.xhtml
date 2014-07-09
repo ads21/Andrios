@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<link href="#{request.contextPath}/resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="#{request.contextPath}/resources/css/estilo.css" rel="stylesheet" type="text/css"/>
+	
+</h:head>
+
+<body style="background-color: #ff4A00">
+<div class="topoCentro"></div>
+<div class="centro">
+	
+		<div id="container">
+		
+			<div class="contentPanel">
+	  
+	            <div class="panel panel-default">
+  		      		<div class="panel-body">
+    		   			<h:form>	
+					
+							<h:panelGrid >
+			
+								<fieldset>
+				
+									<div class="dist-label">
+										<h2 class="fieldLabel"> Area de Login</h2>
+									</div>
+						
+									<br />
+						
+									<h:outputLabel class="fieldLabel" value="Login" />
+									<h:inputText class="form-control" value="" id="login" size="30" />
+						
+									<br />
+						
+									<h:outputLabel class="fieldLabel" value="Senha" for="senha" />
+									<h:inputSecret class="form-control" value="" id="senha" size="30" />
+						
+									<br />
+						
+									<h:commandButton value="Entrar" class="btn-group btn-group-justified" />
+									<h:commandButton value="Cancelar" class="btn-group btn-group-justified" />
+					
+								</fieldset>
+					
+							</h:panelGrid>
+						
+					</h:form>
+  		      		</div>
+	        	</div>
+	        </div>
+		</div>
+</div>
+</body>
+   
+</html>

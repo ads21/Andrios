@@ -1,0 +1,139 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+}
+#topo {
+	width:100%;
+	height:50px;
+}
+#centro {
+	width: 100%;
+	min-height: 600px;
+}
+#rodape {
+	width: 100%;
+	height: 40px;
+	background-color: #FF4A00;
+}
+.centroMeio, .rodapeMeio, .topoCentro {
+	width: 740px;
+	margin: 0 auto;
+}
+#container > .contentPanel{
+	width: 320px;
+	margin: 0 auto;
+}
+.posicInfo {
+	color: #000000;
+	float: left;
+	padding: 10px 0;
+}
+/* Aqui definimos os tamanhos dos campos */
+.tam-comum {
+	width: 300px;
+	padding-right: 20px;
+}
+.tam-nome {
+	width:300px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-nome2 {
+	width:356px;
+	margin-right: 25px;
+	padding-bottom: 20px;
+}
+.tam-end {
+	width:300px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-number {
+	width:150px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.tam-bair {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-cid {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-uf {
+	width:160px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-preco {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-org {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-area {
+	width:150px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-desc {
+	width:500px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-data {
+	width:200px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.tam-pesq {
+	width:400px;
+	margin-right: 20px;
+}
+.bt-dist {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.dist-label {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #BFBFBF;
+}
+.dist-form {
+	padding-top: 20px;
+}
+.box-esq {
+	width: 400px;
+	float: left;
+	padding-top: 20px;
+}
+.box-dir {
+	width: 260px;
+	padding-top: 20px;
+	float: right;
+}
+.foto-evento {
+	width: 255px;
+	height: 145px;
+}
+.dist-tab {
+	padding-top: 20px;
+}
+.borda-evento {
+	border: 2px solid #FFF;
+	width: 200px;
+	height: 150px;
+}
+.borda-evento:HOVER {
+	border: 2px solid #FF4A00;
+}

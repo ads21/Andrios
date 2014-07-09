@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="/layout/template.xhtml">
+	<ui:define name="meio">
+		<div class="centroMeio">
+		<div id="container">
+		<title>Comprar Ingressos</title>		
+			<div class="content">
+			
+			<div class="dist-label">
+				<h1 class="fieldLabel">Comprar Ingressos</h1>
+			</div>
+			
+			<br />
+			
+			<h:dataTable>
+				<h:column>
+					<f:facet name="header">		
+						<h:outputText class="fieldLabel" value="Data" />
+					</f:facet>
+				
+					<f:facet name="header">	
+						<h:inputText class="form-control tam-data" value="" id="pesqNomeUsuario"/>
+					</f:facet>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Evento" class="fielLabel" />
+					</f:facet>
+					
+					<f:facet name="header">
+						<h:selectOneMenu value="" class="form-control">
+							<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+						</h:selectOneMenu>
+					</f:facet>
+				</h:column>
+			</h:dataTable>
+			
+			<h:commandButton class="btn btn-primary bt-dist" value="Pesquisar" />
+			
+			<h:form>
+					
+				<br />
+				
+				<h:dataTable>
+					<h:column>
+						<f:facet name="header">
+							<div class="borda-evento">
+									
+							</div>
+						</f:facet>
+						
+						<f:facet name="header">
+							<h:outputLabel value=""/>
+						</f:facet>
+					</h:column>
+				</h:dataTable>
+				<br />		
+				<h:commandButton class="btn btn-default" value="Voltar" />
+										
+			</h:form>					
+			</div>
+		</div>
+		</div>
+	</ui:define>
+	</ui:composition>
+</h:body>
+</html>

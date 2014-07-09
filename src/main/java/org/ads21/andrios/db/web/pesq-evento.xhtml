@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="/layout/template.xhtml">
+	<ui:define name="meio">
+		<div class="centroMeio">
+		<div id="container">		
+			<div class="content">
+			
+			<div class="dist-label">
+				<h1 class="fieldLabel">Pesquisa de Eventos</h1>
+			</div>
+			
+			<br />
+			
+			<h:dataTable>
+				<h:column>
+					<f:facet name="header">		
+						<h:outputText class="fieldLabel" value="Nome Evento" />
+					</f:facet>
+				
+					<f:facet name="header">	
+						<h:inputText class="form-control tam-pesq" value="" size="30" id="pesqNomeUsuario"/>
+					</f:facet>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:commandButton class="btn btn-primary bt-dist" value="Pesquisar" />
+					</f:facet>
+				</h:column>
+			</h:dataTable>
+			
+			<h:form>
+					
+				<br />
+					
+				<h:dataTable class="table table-striped">
+						
+					<f:facet name="header">Lista de Eventos</f:facet>
+							
+					<h:column>
+						<f:facet name="header">Nome do Evento</f:facet>
+					</h:column>
+											
+					<h:column>
+						<f:facet name="header">Data</f:facet>	
+					</h:column>
+						
+					<h:column>	
+						<f:facet name="header">Hora</f:facet>
+					</h:column>
+						
+					<h:column>
+						<f:facet name="header">Endereço</f:facet>	
+					</h:column>
+						
+					<h:column>
+						<f:facet name="header">Org</f:facet>	
+					</h:column>
+						
+					<h:column>
+						<f:facet name="header">Preço</f:facet>	
+					</h:column>
+						
+					<h:column>
+						<f:facet name="header">Ações</f:facet>
+					</h:column>
+																					
+				</h:dataTable>		
+				
+				<h:commandButton class="btn btn-default" value="Voltar" />
+										
+			</h:form>					
+			</div>
+		</div>
+		</div>
+	</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:body>
+	
+	<ui:composition template="/layout/template.xhtml">
+	
+		<ui:define name="meio">
+		
+		<div class="container theme-showcase" role="main">
+		
+		<h:form>
+		
+		<title>Cadastrar Evento</title>
+
+			
+			<h1 class="fieldLabel" >Cadastro de Eventos</h1>
+					
+			<!-- Primeira Coluna -->
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel class="fieldLabel" value="Nome do Evento" for="nomeEvento"/>
+					<h:inputText class="form-control" value="" id="nomeEvento" name="nomeEvento" />
+					
+				</div>
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Endereço" for="endereco" />
+					<h:selectOneMenu value="" id="endereco" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+					
+				</div>
+				
+			</div>
+							
+			<!-- Segunda Coluna -->
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+					<h:outputLabel value="Bairro" for="bairro" />
+						<h:selectOneMenu value="" id="bairro" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				</div>			
+				
+				<div class="col-md-4">
+					<h:outputLabel value="Cidade" for="cidade" />
+					<h:selectOneMenu value="" id="cidade" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				</div>
+				
+				<div class="col-md-4">
+					
+					<h:outputLabel value="UF" for="uf" />
+					<h:selectOneMenu value="#{cidadeBean.estadoId}" id="uf" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+						<f:selectItems value="#{cidadeBean.siglaEstados}" />
+					</h:selectOneMenu>
+					
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Data do Evento" for="data" id="datepicker"/>
+					<h:inputText class="form-control" value="" id="data" name="data" />
+					
+				</div>
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Preço" for="preco"/>
+					<h:inputText class="form-control" value="" id="preco" name="preco" />
+					
+				</div>
+				
+				<div class="col-md-4">
+				
+					<h:outputLabel value="Organizadores" for="org" />
+					<h:selectOneMenu value="" id="org" class="form-control">	
+					<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				
+				</div>
+				
+			</div>	
+			
+			<div class="row">
+				
+				<div class="col-md-4">	
+					<h:outputLabel value="Área" />
+						<h:selectOneMenu value="" class="form-control">
+						<f:selectItem itemValue="-- Selecione --" noSelectionOption="true"/>
+					</h:selectOneMenu>
+				</div>		
+			</div>	
+
+			<div class="row">
+			
+				<div class="col-xs-12 col-sm-6 col-md-8">
+					<h:outputLabel value="Descrição" for="desc" />
+					<h:inputTextarea value="" id="desc" name="desc" class="form-control" />				
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-1">
+					<h:outputLabel value="Ativo"/>				
+				</div>
+				
+				<div class="col-md-1">
+					<h:selectBooleanCheckbox value="#" />
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-md-1">
+					<h:commandButton value="Cadastrar" class="btn btn-info"/>
+				</div>
+				
+				<div class="col-md-1">
+					<h:commandButton value="Voltar" class="btn btn-default"/>
+				</div>
+				
+			</div>
+					
+		</h:form>
+			
+		</div>
+			
+		</ui:define>
+		
+	</ui:composition>
+	
+	<script>
+	$(function() {
+	  $( "#datepicker" ).datepicker();
+	});
+  </script>	
+</h:body>
+</html> 
