@@ -1,5 +1,5 @@
 package org.ads21.andrios.entidade;
 
-public class Cidades {
+public class Cidade {
 
 }

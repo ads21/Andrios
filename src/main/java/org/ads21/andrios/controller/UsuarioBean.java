@@ -1,4 +1,4 @@
-package org.ads21.andrios.pojo;
+package org.ads21.andrios.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;

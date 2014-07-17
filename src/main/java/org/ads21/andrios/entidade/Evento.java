@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="eventos")
-public class Eventos {
+public class Evento {
 	
 	@Id
 	@Column(name="ev_id")
