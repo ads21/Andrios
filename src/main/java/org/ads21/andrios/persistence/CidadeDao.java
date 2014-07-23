@@ -22,6 +22,15 @@ public class CidadeDao {
 		
 	}
 	
+	public void excluir(Cidades cidades){
+		Session session = SessionFactoryUtil
+				.getSessionFactory().openSession();
+		Transaction tx = session.beginTransaction();
+		session.delete(cidades);
+		tx.commit();
+		session.close();
+	}
+	
 	public List<Estados> listarEstados(){
 		Session session = SessionFactoryUtil
 				.getSessionFactory().openSession();		
