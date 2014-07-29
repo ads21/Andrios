@@ -2,6 +2,10 @@
 
 Software responsável pelo gerenciamento e divulgação de venda de ingressos( shows, eventos em geral), tornando facil e organizada as transações feitas em lojas que vendem ingressos de shows e outros tipos de eventos. Além de ser um software gratuito, o Andrios impulssiona novos desenvolvedores a aprender tecnologias mais usadas no mercado, sendo assim impulssionando ao novo desenvolvedor entrar com uma bagagem no mercado.
 
+Link Requisitos de Sistemas: https://docs.google.com/document/d/1GzshKtUgV0IFmIsLq0xYtnCGS4E1nStwbefZJcUZtxk/edit?usp=sharing
+
+Link Relacionamentos das Entidades: https://drive.google.com/file/d/0B9iZS37VtdH-cGFlZVJVcS0tc1E/edit?usp=sharing
+
 ### Configuração do Git
 
 #### Configurações iniciais
